@@ -10,6 +10,11 @@ Review.destroy_all
 User.destroy_all
 Hike.destroy_all
 
+Review.reset_pk_sequence
+User.reset_pk_sequence
+Hike.reset_pk_sequence
+
+
 
 #User
 missy = User.create(name: "Missy", age: 27, location: "Centreville, VA")
