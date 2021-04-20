@@ -31,7 +31,7 @@ hike4 = Hike.create(name: "Doyles River Falls", location: "Shenandoah National P
 hike5 = Hike.create(name: "Northern Peaks Trail", location: "Sugarloaf Mountain Natural Area", difficulty:"difficult", distance: 6.3, image: "https://liveandlethike.files.wordpress.com/2016/12/dsc00012.jpg?w=1280")
 hike6 = Hike.create(name: "Billy Goat Trail", location: "Great Falls, MD", difficulty: "extreme", distance: 4.4, image: "https://visitmontgomery.com/wp-content/uploads/2020/04/great-falls-from-above.jpg")
 hike7 = Hike.create(name: "Little Gunpowder Trail", location: "Gunpowder Falls State Park, MD", difficulty: "moderate", distance: 4.2, image:"https://media-cdn.tripadvisor.com/media/photo-s/08/4d/80/83/little-gunpowder-falls.jpg")
-hike8 = Hike.create(name: "Maryland Heights Trail", location: "Harpers Ferry, MD", difficulty: "moderate", distance: "moderate", image: "https://live.staticflickr.com/723/23226735645_6dfe4afa80_b.jpg")
+hike8 = Hike.create(name: "Maryland Heights Trail", location: "Harpers Ferry, MD", difficulty: "moderate", distance: 4.5, image: "https://live.staticflickr.com/723/23226735645_6dfe4afa80_b.jpg")
 hike9 = Hike.create(name: "Little Devils Stairs Loop", location: "Shenandoah National Park", difficulty: "extreme", distance:7.4, image: "https://assets.sectionhiker.com/wp-content/uploads/thumbskeep/2014/05/Hiker-climbing-the-Stairs-about-mid-way-up1.jpg")
 
 #review

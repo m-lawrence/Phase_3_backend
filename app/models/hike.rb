@@ -12,4 +12,8 @@ class Hike < ApplicationRecord
         end
     end
 
+    def review
+        self.reviews
+    end
+
 end
