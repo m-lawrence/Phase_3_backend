@@ -6,8 +6,9 @@ class Hike < ApplicationRecord
     def averagerating 
         average = self.reviews.map{|hike| hike.rating}
         if average.length > 0 
-        average.sum / average.length
-        else puts "sorry, no rating"
+            average.sum / average.length
+        else 
+            puts "sorry, no rating"
         end
     end
 
