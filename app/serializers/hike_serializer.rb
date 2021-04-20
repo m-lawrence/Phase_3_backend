@@ -1,3 +1,3 @@
 class HikeSerializer < ActiveModel::Serializer
-  attributes :averageRating, :name, :location, :image, :difficulty, :distance
+  attributes :averagerating, :name, :location, :image, :difficulty, :distance, :id
 end
