@@ -12,8 +12,8 @@ class Hike < ApplicationRecord
         end
     end
 
-    def hikereviews
-        self.reviews
-    end
+    # def hikereviews
+    #     self.reviews
+    # end
 
 end
