@@ -7,8 +7,8 @@ class ReviewsController < ApplicationController
 
     def show
         render json: review.to_json(:include =>{
-            :user => {:except => [:created_at, :updated_at]},
-            :hike => {:except => [:created_at, :updated_at]}
+            :user => {:except => [:updated_at]},
+            :hike => {:except => [:updated_at]}
         })
     end
 

@@ -16,6 +16,7 @@ missy = User.create(name: "Missy", age: 27, location: "Centreville, VA")
 yuri = User.create(name: "Yuri", age: 24, location: "Fairfax Station, VA" )
 amanda = User.create(name: "Amanda", age: 26, location: "Washington DC")
 carlos = User.create(name: "Carlos", age: 40, location: "Washington DC")
+seth = User.create(name: "Seth", age: 30, location: "New York")
 
 #Hike
 hike1 = Hike.create(name: "Dark Hollow Falls", location: "Shenandoah National Park", difficulty: "easy", distance: 1.4, image: "https://www.nps.gov/common/uploads/cropped_image/primary/9ACB09D0-A1B5-B1BC-EFD734B5A085F9C4.jpg?width=1200&quality=90&mode=crop")
@@ -30,11 +31,18 @@ hike9 = Hike.create(name: "Little Devils Stairs Loop", location: "Shenandoah Nat
 
 #review
 review1 = Review.create(user: missy, hike: hike1, rating: 5, description:"Trail is nice with a good waterfall")
-review2 = Review.create(user: missy, hike: hike5, rating: 4, description:"Trail is steep but pretty doable even if you are slightly out of shape. Avoid if raining.")
-review3 = Review.create(user: yuri, hike: hike2, rating: 4.5, description:"One of my favorite trails! Not hard, and waterfall is beautiful!")
-review4 = Review.create(user: yuri, hike: hike6, rating: 4, description: "If you are short, its better to be accompanied by a tall friend to the trail")
-review5 = Review.create(user: amanda, hike: hike3, rating:3.5, description: "Too crowded")
-review6 = Review.create(user: amanda, hike: hike4, rating:5, description:"Beautiful hike with my husband. The falls are amazing & we love hiking along the stream")
-review7 = Review.create(user: carlos, hike: hike1, rating: 3, description: "It was okey")
-review8 = Review.create(user: yuri, hike: hike5, rating: 2, description:" Not as pretty as I thought it would be")
-puts "Done Done Done"
+review2 = Review.create(user: carlos, hike: hike1, rating: 3, description: "It was okey")
+review3 = Review.create(user: amanda, hike: hike3, rating:3.5, description: "Too crowded")
+review4 = Review.create(user: carlos, hike: hike3, rating:2, description: "Not a easy trail for older folks" )
+review5 = Review.create(user: missy, hike: hike5, rating: 4, description:"Trail is steep but pretty doable even if you are slightly out of shape. Avoid if raining.")
+review6 = Review.create(user: amanda, hike: hike5, rating: 5, description:"Beautiful, challenging trail")
+review7 = Review.create(user: yuri, hike: hike2, rating: 4.5, description:"One of my favorite trails! Not hard, and waterfall is beautiful!")
+review8 = Review.create(user: seth, hike:hike2, rating:5, description: "Waterfall is worth seeing.")
+review9 = Review.create(user: yuri, hike: hike6, rating: 3, description: "If you are short, its better to be accompanied by a tall friend to the trail")
+review10 = Review.create(user: missy, hike: hike6, rating: 5, description:"It was awesome, fun for the whole family")
+review11 = Review.create(user: amanda, hike: hike4, rating:5, description:"Beautiful hike with my husband. The falls are amazing & we love hiking along the stream")
+review12 = Review.create(user: yuri, hike: hike7, rating: 2, description:" Not as pretty as I thought it would be")
+review13 = Review.create(user: yuri, hike: hike8, rating: 5, description: "Magnificent views of Harper's Ferry and the rivers merging")
+review14 = Review.create(user: yuri, hike: hike9, rating: 3, description:" I wasn't prepared for this !!!")
+
+puts " ✅ Done Done Done"
