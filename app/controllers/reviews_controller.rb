@@ -1,15 +1,20 @@
 class ReviewsController < ApplicationController
-    before_action :find_review, only: [:show, :update, :destroy]
+    before_action :find_review, only: [:show, :edit, :update, :destroy]
     def index
         reviews = Review.all
         render json: reviews
     end
 
     def show
-        render json: review.to_json(:include =>{
-            :user => {:except => [:updated_at]},
-            :hike => {:except => [:updated_at]}
-        })
+        review = Review.find(params[:id])
+        if review
+            render json: review.to_json(:include =>{
+                :user => {:only => [:name, :age, :location, :myhikes, :id]},
+                :hike => {:only => [:averagerating, :name, :location, :image, :difficulty, :distance, :id]}
+                },
+                :except =>[:updated_at] 
+            )
+        end
     end
 
     def create
@@ -18,7 +23,7 @@ class ReviewsController < ApplicationController
     end
 
     def edit
-        review = Review.find(params[:id])
+        
     end
 
     def update
