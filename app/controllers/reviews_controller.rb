@@ -7,14 +7,15 @@ class ReviewsController < ApplicationController
 
     def show
         review = Review.find(params[:id])
-        if review
-            render json: review.to_json(:include =>{
-                :user => {:only => [:name, :age, :location, :myhikes, :id]},
-                :hike => {:only => [:averagerating, :name, :location, :image, :difficulty, :distance, :id]}
-                },
-                :except =>[:updated_at] 
-            )
-        end
+        render json: review
+        # if review
+        #     render json: review.to_json(:include =>{
+        #         :user => {:only => [:name, :age, :location, :myhikes, :id]},
+        #         :hike => {:only => [:averagerating, :name, :location, :image, :difficulty, :distance, :id]}
+        #         },
+        #         :except =>[:updated_at] 
+        #     )
+        # end
     end
 
     def create
