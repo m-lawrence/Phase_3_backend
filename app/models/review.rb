@@ -6,5 +6,8 @@ class Review < ApplicationRecord
     self.user.name
   end
 
+  def date
+    self.created_at.strftime(" on %Y/%m/%d ")
+  end
 end
 

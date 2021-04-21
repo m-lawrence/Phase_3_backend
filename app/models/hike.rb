@@ -5,15 +5,12 @@ class Hike < ApplicationRecord
 
     def averagerating 
         average = self.reviews.map{|hike| hike.rating}
+        # byebug
         if average.length > 0 
-            average.sum / average.length
+            (average.sum.to_f / average.length).round()
         else 
             puts "sorry, no rating"
         end
     end
-
-    # def hikereviews
-    #     self.reviews
-    # end
 
 end
