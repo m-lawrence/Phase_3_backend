@@ -19,8 +19,7 @@ class ReviewsController < ApplicationController
     end
 
     def create
-        review = Review.create!(review_params)
-        render json :review
+        review = Review.create(review_params)
     end
 
     def edit
@@ -38,7 +37,7 @@ class ReviewsController < ApplicationController
     private
 
     def review_params
-        params.permit(:user, :hike, :description, :rating)
+        params.permit(:user_id, :hike_id, :description, :rating)
     end
 
     def find_review
