@@ -5,4 +5,6 @@ class User < ApplicationRecord
     def myhikes
         self.hikes
     end
+
+    
 end
