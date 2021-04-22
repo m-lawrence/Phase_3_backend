@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-    before_action :find_review, only: [:show, :edit, :update, :destroy]
+    # before_action :find_review, only: [:show, :edit, :update, :destroy]
     
     def index
         reviews = Review.all
@@ -14,21 +14,25 @@ class ReviewsController < ApplicationController
 
     def create
         review = Review.create(review_params)
+        render json: review
     end
 
     def edit
-        
+        review = Review.find(params[:id])
     end
 
     def update
         # byebug
+        review = Review.find(params[:id])
         review.update(review_params)
-        
+        render json: review
         # review.update(description: params[:description], rating: params[:rating])
     end
 
     def destroy
+        review = Review.find(params[:id])
         review.destroy
+        render json: {}
     end
 
     private
@@ -37,7 +41,7 @@ class ReviewsController < ApplicationController
         params.permit(:user_id, :hike_id, :description, :rating)
     end
 
-    def find_review
-        review = Review.find(params[:id])
-    end
+    # def find_review
+    #     review = Review.find(params[:id])
+    # end
 end
